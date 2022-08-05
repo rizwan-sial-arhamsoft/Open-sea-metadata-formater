@@ -5,8 +5,6 @@ df = pd.read_excel('TraitsS2.xlsx',
                    usecols=['Background', 'Body', 'Frame', 'Corner', 'Border', 'Full Head', 'Mouth', 'Eyes', 'Crown',
                             'Mask', 'Snout', 'HandsOpen', 'HandsClosed', 'Object'])
 
-print(df)
-print(df['Background'].iloc[0].find("No"))
 row_1 = []
 for i in range(0, 10000):
     row_1 = []
