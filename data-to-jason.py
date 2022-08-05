@@ -5,6 +5,8 @@ df = pd.read_excel('TraitsS2.xlsx',
                    usecols=['Background', 'Body', 'Frame', 'Corner', 'Border', 'Full Head', 'Mouth', 'Eyes', 'Crown',
                             'Mask', 'Snout', 'HandsOpen', 'HandsClosed', 'Object'])
 
+print(df)
+print(df['Background'].iloc[0].find("No"))
 row_1 = []
 for i in range(0, 10000):
     row_1 = []
@@ -47,7 +49,7 @@ for i in range(0, 10000):
                        "hosted on our website [[hyperlink]], in which you can compete to win big Eth prizes. "
                        "Also try our NFT based governance to vote on how the treasury is spent and check out our "
                        "featured artists gallery.",
-        "image": f"ipfs://QmXKUNj8XfduGBJ545WQexWTwyTuhJodrif5f3R34JjFTE/S2_{str(i + 1).rjust(5, '0')}.png",
+        "image": f"ipfs://-------Put Here The Image Folder Hash---/S2_{str(i + 1).rjust(5, '0')}.png",
         "attributes": row_1}
     with open(f'Jason-Data/{i}.json', 'w') as fp:
         json.dump(data, fp)
